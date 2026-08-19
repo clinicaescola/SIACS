@@ -1,0 +1,6 @@
+{
+  "name": "Sistema de Agendamento Campos Salles",
+  "description": "SIACS - Sistema Integrado de Agendamento Campos Salles • Faculdade Campos Salles",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

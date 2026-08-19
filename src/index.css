@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  h1, h2, h3, .font-serif {
+    font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+}
+
+/* Custom scrollbar for natural tones */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8E8D8A;
+}
+
+/* Regras Oficiais de Impressão (Print Media) */
+@media print {
+  html, body {
+    background: #FFFFFF !important;
+    color: #1A202C !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ocultar elementos de navegação, barras laterais e botões de ação */
+  header, aside, nav, .print\:hidden, [class*="print:hidden"], #sidebar-menu, .fixed.inset-0:not(.print-container-active) {
+    display: none !important;
+  }
+
+  /* Exibir a folha de impressão em tela cheia na folha A4 */
+  #anamnese-printable-sheet, .printable-document {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+
+  /* Manter integridade de blocos em páginas */
+  .section-box, .sign-section, .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
